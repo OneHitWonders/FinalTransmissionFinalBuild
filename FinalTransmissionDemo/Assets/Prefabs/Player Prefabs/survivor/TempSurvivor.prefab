@@ -71,6 +71,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1041726854594600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4164826217027802}
+  m_Layer: 10
+  m_Name: Bulletspawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1082382407632590
 GameObject:
   m_ObjectHideFlags: 1
@@ -1260,6 +1275,7 @@ Transform:
   - {fileID: 4266146350902158}
   - {fileID: 4605955920108578}
   - {fileID: 4707662699757304}
+  - {fileID: 4164826217027802}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1317,6 +1333,19 @@ Transform:
   - {fileID: 4244308045956380}
   m_Father: {fileID: 4382603673744232}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4164826217027802
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1041726854594600}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.656, y: 0.901, z: 0.111}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4065681751748580}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4174112196964014
 Transform:
@@ -2341,6 +2370,10 @@ MonoBehaviour:
   Strength: 100
   Accuracy: 100
   FoodConsumptionAmount: 10
+  bulletPrefab: {fileID: 1299413360933826, guid: 414b650ca6111334b86ec211f6fae730,
+    type: 2}
+  bulletSpawn: {fileID: 4164826217027802}
+  ammoCount: 20
 --- !u!114 &114773528020025288
 MonoBehaviour:
   m_ObjectHideFlags: 1

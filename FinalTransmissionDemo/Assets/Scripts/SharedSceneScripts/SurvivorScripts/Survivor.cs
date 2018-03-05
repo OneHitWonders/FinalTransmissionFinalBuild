@@ -20,7 +20,22 @@ public class Survivor : MonoBehaviour {
     public float Accuracy = 100;
     public float FoodConsumptionAmount = 10;
 
+    public GameObject bulletPrefab;
+    public Transform bulletSpawn;
+    public int ammoCount = 20;
 
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (ammoCount >= 1)
+            {
+                Fire();
+                ammoCount--;
+            }
+
+        }
+    }
 
     // Use this for initialization
     void Awake()
@@ -43,7 +58,23 @@ public class Survivor : MonoBehaviour {
         //Stats.GenerateStats();
     }
 
+    public void Fire()
+    {
+        // Will create the bullet
+        var bullet = (GameObject)Instantiate(
+            bulletPrefab,
+            bulletSpawn.position,
+            bulletSpawn.rotation);
+
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 100;
+
+        // Destroys the bullet after two seconds
+        Destroy(bullet, 2.0f);
+    }
+
 }//end class
+
+
 public class SurvivorStats : MonoBehaviour
 {
     public float Health = 100;
