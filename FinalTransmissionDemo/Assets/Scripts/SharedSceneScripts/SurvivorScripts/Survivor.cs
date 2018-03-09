@@ -23,6 +23,7 @@ public class Survivor : MonoBehaviour {
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
     public int ammoCount = 20;
+    public int playerHealth = 100;
 
     void Update()
     {
@@ -70,6 +71,30 @@ public class Survivor : MonoBehaviour {
 
         // Destroys the bullet after two seconds
         Destroy(bullet, 2.0f);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.tag == "EnemyShell")
+        {
+            playerHealth = playerHealth - 10;
+
+            if (playerHealth <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        if (other.gameObject.tag == "Enemy")
+        {
+            playerHealth = playerHealth - (Random.Range(3, 9));
+
+            if (playerHealth <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
 }//end class

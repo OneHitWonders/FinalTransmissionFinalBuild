@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Game Scenes/Riverdale/Riverdale Mansion.unity
+- path: Assets/Scenes/Game Scenes/Riverdale/TestSearchBuildingScene.unity
   isLoaded: 1
   isActive: 1

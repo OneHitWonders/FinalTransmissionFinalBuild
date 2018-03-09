@@ -28,7 +28,7 @@ public class MedCollect : MonoBehaviour
         {
             //add ammo
             Destroy(gameObject);//remove crate
-            survivor.Health += 15;
+            survivor.playerHealth += 15;
         }
 
     }
