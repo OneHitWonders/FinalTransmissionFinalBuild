@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class AmmoCollect : MonoBehaviour {
 
+    private Survivor survivor;
+
     // Use this for initialization
     void Start()
     {
-
+        FindSurvivor();
     }
 
     // Update is called once per frame
@@ -25,7 +27,24 @@ public class AmmoCollect : MonoBehaviour {
         {
             //add ammo
             Destroy(gameObject);//remove crate
+            survivor.ammoCount += 20;
         }
+
+    }
+
+    void FindSurvivor()
+    {
+        GameObject temp = GameObject.FindWithTag("Survivor");
+
+        if(temp != null)
+        {
+            survivor = temp.GetComponent<Survivor>();
+        }
+        else
+        {
+            Debug.Log("No survivor detected");
+        }
+
 
     }
 }

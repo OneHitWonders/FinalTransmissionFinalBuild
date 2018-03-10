@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Test Scenes/Test Mission Scene/MissionTest.unity
+=======
+- path: Assets/Scenes/Game Scenes/Riverdale/TestSearchBuildingScene.unity
+>>>>>>> 2dadb19cf2d153b9430abbd4e1e8bfea8b12ca1f
   isLoaded: 1
   isActive: 1
