@@ -18,13 +18,13 @@ public class QButtonScript : MonoBehaviour {
 
   void  Start()
     {
-        acceptButton = GameObject.Find("QuestCanvas/QuestPanel/QuestDescription/GameObject/Accept").gameObject;
+        acceptButton = GameObject.FindWithTag("Accept");
         acceptButtonScript = acceptButton.GetComponent<QButtonScript>();
 
-        giveUpButton = GameObject.Find("GiveUp").gameObject;
+        giveUpButton = GameObject.FindWithTag("GiveUp");
         giveUpButtonScript = giveUpButton.GetComponent<QButtonScript>();
 
-        completeButton = GameObject.Find("Complete").gameObject;
+        completeButton = GameObject.FindWithTag("Complete");
         CompleteButtonScript = completeButton.GetComponent<QButtonScript>();
 
         //BUGS EXIST HERE
@@ -38,9 +38,9 @@ public class QButtonScript : MonoBehaviour {
         //completeButton = GameObject.Find("QuestCanvas").transform.Find("QuestPanel").transform.Find("QuestDescription").transform.Find("GameObject").transform.Find("Complete").gameObject;
         //CompleteButtonScript = completeButton.GetComponent<QButtonScript>();
 
-        acceptButton.SetActive(false);
-        giveUpButton.SetActive(false);
-        completeButton.SetActive(false);
+        acceptButton.SetActive(true);
+        giveUpButton.SetActive(true);
+        completeButton.SetActive(true);
 
     }
 

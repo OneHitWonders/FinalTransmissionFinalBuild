@@ -31,9 +31,9 @@ public class QuestUIManager : MonoBehaviour {
     public GameObject qLogButton;
     private List<GameObject> qButtons = new List<GameObject>();
 
-    private GameObject acceptButton;
-    private GameObject giveUpButton;
-    private GameObject completeButton;
+    public GameObject acceptButton;
+    public GameObject giveUpButton;
+    public GameObject completeButton;
 
     //Spacer
     public Transform qButtonSpacer1; //spacer for qButton
@@ -49,6 +49,31 @@ public class QuestUIManager : MonoBehaviour {
     public Text questLogTitle;
     public Text questLogDesctription;
     public Text questLogSummary;
+
+
+    //public QButtonScript acceptButtonScript;
+    //public QButtonScript giveUpButtonScript;
+    //public QButtonScript CompleteButtonScript;
+
+
+    //void Start()
+    //{
+       
+
+    //    acceptButton = GameObject.Find("QuestCanvas").transform.Find("QuestPanel").transform.Find("QuestDescription").transform.Find("GameObject").transform.Find("Accept").gameObject;
+    //    acceptButtonScript = acceptButton.GetComponent<QButtonScript>();
+
+    //    giveUpButton = GameObject.Find("QuestCanvas").transform.Find("QuestPanel").transform.Find("QuestDescription").transform.Find("GameObject").transform.Find("GiveUp").gameObject;
+    //    giveUpButtonScript = giveUpButton.GetComponent<QButtonScript>();
+
+    //    completeButton = GameObject.Find("QuestCanvas").transform.Find("QuestPanel").transform.Find("QuestDescription").transform.Find("GameObject").transform.Find("Complete").gameObject;
+    //    CompleteButtonScript = completeButton.GetComponent<QButtonScript>();
+
+    //    acceptButton.SetActive(true);
+    //    giveUpButton.SetActive(true);
+    //    completeButton.SetActive(true);
+
+    //}
 
     void Awake()
     {
@@ -71,10 +96,10 @@ public class QuestUIManager : MonoBehaviour {
 
     // Update is called once per frame //PRESS Q TO SHOW QUESTS
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
-            questLogPanelActive = !questLogPanelActive;
-            //ShowQuestLogPanel();
+            questLogPanelActive = !questPanelActive;
+            ShowQuestLogPanel();
             //show questlog panel
         }
     }
