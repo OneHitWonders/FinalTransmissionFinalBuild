@@ -14,9 +14,6 @@ TagManager:
   - BulletinBoard
   - DayText
   - HourText
-  - Accept
-  - GiveUp
-  - Complete
   layers:
   - Default
   - TransparentFX

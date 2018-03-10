@@ -63,7 +63,7 @@ public class CreateProfileLoader : MonoBehaviour {
         if (!string.IsNullOrEmpty(username))
         {
             instance.CreateProfile(username);
-            instance.LoadScene("mainmenu");
+            SceneManager.LoadScene("mainmenu");
         }
 
     }

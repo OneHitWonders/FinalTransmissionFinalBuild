@@ -26,6 +26,3 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game Scenes/Riverdale/TestSearchBuildingScene.unity
     guid: ecd0c76a20c67e44c8c13a2d89252275
-  - enabled: 1
-    path: Assets/Scenes/Home Scene/BaseScene.unity
-    guid: 6590405013786cf43b387ee794e26031

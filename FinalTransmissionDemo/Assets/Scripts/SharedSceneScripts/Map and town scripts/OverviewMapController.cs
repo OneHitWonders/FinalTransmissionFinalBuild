@@ -8,10 +8,6 @@ public class OverviewMapController : MonoBehaviour
 {
     //create a game instance in future build
     private SceneLoader sceneload;
-    public GameInstance instance;
-
-
-
 
     public Button HomeBtn;
     public Button RiverdaleBtn;
@@ -19,14 +15,14 @@ public class OverviewMapController : MonoBehaviour
 
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         GameObject gameController = GameObject.FindGameObjectWithTag("GameController");
 
         if (gameController != null)
         {
 
-            instance = gameController.GetComponent<GameInstance>();
+            sceneload = gameController.GetComponent<SceneLoader>();
 
             RiverdaleBtn.onClick.AddListener(LoadRiverdale);
             HomeBtn.onClick.AddListener(LoadHomeBase);
@@ -43,7 +39,7 @@ public class OverviewMapController : MonoBehaviour
 
     private void LoadHomeBase()
     {
-        SceneManager.LoadScene("BaseScene");
+        SceneManager.LoadScene("HomeScene");
     }
 
 

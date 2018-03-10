@@ -7,9 +7,6 @@ using UnityEngine.UI;
 public class MainMenuController : MonoBehaviour
 {
     private SceneLoader sceneload;
-    private GameInstance instance;
-
-    public Text txtUsername;
 
     public Button btnPlay;
     public Button btnQuit;
@@ -23,13 +20,10 @@ public class MainMenuController : MonoBehaviour
 
         if (gameController != null)
         {
-            instance = gameController.GetComponent<GameInstance>();
-            txtUsername.text = instance.UserProfile.Username;
+            sceneload = gameController.GetComponent<SceneLoader>();
 
             btnPlay.onClick.AddListener(StartGame);
-            btnQuit.onClick.AddListener(QuitGame);
-            btnDelete.onClick.AddListener(DeleteProfileAndRestart);
-
+          
         }
 
     }
@@ -37,19 +31,9 @@ public class MainMenuController : MonoBehaviour
 
     private void StartGame()
     {
-        instance.LoadScene("OverviewMap");
+        SceneManager.LoadScene("OverviewMap");
     }
 
-    private void QuitGame()
-    {
-        instance.Quit();
-    }
-
-    private void DeleteProfileAndRestart()
-    {
-        instance.DeleteProfile();
-        instance.LoadScene("createprofile");
-    }
 
 
 }

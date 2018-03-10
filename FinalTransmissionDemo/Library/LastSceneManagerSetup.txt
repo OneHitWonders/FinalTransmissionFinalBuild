@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Menu Scenes/createprofile.unity
+=======
+- path: Assets/Scenes/Test Scenes/HomeScene.unity
+>>>>>>> parent of 2ceb667... Noel Sat
   isLoaded: 1
   isActive: 1

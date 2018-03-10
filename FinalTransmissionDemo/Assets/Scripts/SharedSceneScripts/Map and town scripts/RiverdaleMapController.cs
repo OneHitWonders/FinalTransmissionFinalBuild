@@ -9,7 +9,7 @@ public class RiverdaleMapController : MonoBehaviour {
 
     public Button OverviewButton;
     public Button RiverdaleMansion;
-    GameInstance instance;
+
 
 
 	void Start () {
@@ -17,9 +17,6 @@ public class RiverdaleMapController : MonoBehaviour {
 
         if (gameController != null)
         {
-
-            instance = gameController.GetComponent<GameInstance>();
-
             OverviewButton.onClick.AddListener(LoadOverview);
             RiverdaleMansion.onClick.AddListener(LoadRiverdaleMansion);
         }
